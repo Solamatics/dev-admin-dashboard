@@ -2,5 +2,10 @@
   display: flex;
   .home__container {
     flex: 6;
+
+    .widgets {
+      display: flex;
+      padding: 20px;
+    }
   }
 }
