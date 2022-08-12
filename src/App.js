@@ -23,6 +23,21 @@ function App() {
               <Route path=":productId" element={<Single />} />
               <Route path="new" element={<New />} />
             </Route>
+            <Route
+              path="*"
+              element={
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Page does not exist
+                </p>
+              }
+            ></Route>
           </Route>
         </Routes>
       </Router>
