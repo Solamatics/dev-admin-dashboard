@@ -3,75 +3,77 @@
 
   .newContainer {
     flex: 6;
-  }
 
-  .top,
-  .bottom {
-    display: flex;
-  }
-
-  .bottom {
-    padding: 10px;
-    margin: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
-    h1 {
-      color: lightgray;
-      font-size: 16px;
+    .top,
+    .bottom {
+      display: flex;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      padding: 20px;
+      margin: 20px;
     }
 
-    .left {
-      flex: 1;
-      text-align: center;
+    .bottom {
+      margin: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        cursor: pointer;
+      h1 {
+        color: lightgray;
+        font-size: 16px;
       }
-    }
 
-    .right {
-      flex: 2;
+      .left {
+        flex: 1;
+        text-align: center;
 
-      form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
 
-        .formInput {
-          width: 40%;
+      .right {
+        flex: 2;
 
-          label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
 
-            .icon {
-              cursor: pointer;
+          .formInput {
+            width: 40%;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              outline: none;
+              border-bottom: 1px solid rgb(221, 208, 208);
             }
           }
 
-          input {
-            width: 100%;
-            padding: 5px;
+          button {
+            width: 150px;
+            padding: 10px;
             border: none;
-            outline: none;
-            border-bottom: 1px solid rgb(221, 208, 208);
+            background-color: teal;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
           }
-        }
-
-        button {
-          width: 150px;
-          padding: 10px;
-          border: none;
-          background-color: teal;
-          color: white;
-          font-weight: bold;
-          cursor: pointer;
-          margin-top: 10px;
         }
       }
     }
