@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -13,8 +13,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 export const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -87,9 +90,15 @@ export const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="color__option"></div>
-        <div className="color__option"></div>
-        <div className="color__option"></div>
+        <div
+          className="color__option"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="color__option"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
+        {/* <div className="color__option"></div> */}
       </div>
     </div>
   );

@@ -44,7 +44,28 @@
         &:hover {
           background-color: #333;
         }
+
+        .icon {
+          color: #999;
+        }
       }
     }
+  }
+
+  .dataTable {
+    .datagrid {
+      color: gray;
+      border: none;
+    }
+    .viewButton,
+    .deleteButton,
+    .cellWithStatus {
+      color: gray;
+      border: none;
+    }
+  }
+
+  input {
+    background-color: transparent;
   }
 }
