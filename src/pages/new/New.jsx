@@ -11,8 +11,16 @@ const New = ({ inputs, title }) => {
   const [data, setData] = useState({});
   const [file, setFile] = useState("");
 
+  const handleChange = (e) => {
+    const id = e.target.id;
+    const value = e.target.value;
+
+    setData({ ...data, [id]: value });
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
+
     try {
       const res = await createUserWithEmailAndPassword(
         auth,
@@ -23,15 +31,9 @@ const New = ({ inputs, title }) => {
         ...data,
         timeStamp: serverTimestamp(),
       });
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(error);
     }
-  };
-  const handleChange = (e) => {
-    const id = e.target.id;
-    const value = e.target.value;
-
-    setData({ ...data, [id]: value });
   };
 
   return (
