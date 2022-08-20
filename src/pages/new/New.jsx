@@ -12,14 +12,15 @@ import {
   getDownloadURL,
   getStorage,
 } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [data, setData] = useState({});
   const [perc, setPerc] = useState(null);
+  const navigate = useNavigate();
 
   // const storage = getStorage();
-
   useEffect(() => {
     const uploadFile = () => {
       const name = new Date().getTime() + file.name;
@@ -79,6 +80,7 @@ const New = ({ inputs, title }) => {
         ...data,
         timeStamp: serverTimestamp(),
       });
+      navigate(-1);
     } catch (error) {
       console.log(error);
     }
